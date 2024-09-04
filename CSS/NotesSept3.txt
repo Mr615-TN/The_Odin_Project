@@ -1,0 +1,9 @@
+CSS is made up of various rules at the most basic level
+
+<div> is an empty container
+
+Selectors are HTML elements to which CSS rules apply (they are being selected for each rule)
+
+Universial selectors will select elements of any type
+
+
