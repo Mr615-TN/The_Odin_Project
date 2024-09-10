@@ -1,0 +1,23 @@
+CSS is made up of various rules at the most basic level
+
+<div> is an empty container
+
+Selectors are HTML elements to which CSS rules apply (they are being selected for each rule)
+
+Universial selectors will select elements of any type
+    example -> { color:purple; }
+
+A type selector will select all elements of the given element type (the syntax is just name of the element)
+    example -> <div>Hello World!</div>
+
+
+Class selectors will select all elements with the given class, which is just an attribute you place on an HTML element
+    example -> <div class="alert-text">Please agree to our terms of service.</div>
+                .alert-text {
+                    color: red;
+                }
+ID selectors are similar to class selectors. They select an element with the given ID, which is another attribute you place on an HTML element. The major difference between classes and IDs is that an element can only have one ID.
+    example -> <div id="title">My Awesome 90's Page</div>
+                #title {
+                background-color: red;
+                }
