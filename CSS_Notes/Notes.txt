@@ -35,7 +35,7 @@ Grouping selector:
                     /* several unique declarations */
                 }
 
-                .read,
+    example ->  .read,
                 .unread {
                     color: white;
                     background-color: black;
@@ -48,3 +48,47 @@ Grouping selector:
                 .unread {
                     /* several unique declarations */
                 }
+Chaining Selectors. Another way to use selectors is to chain them as a list without any separation.
+    example ->  <div>
+                    <div class="subsection header">Latest Posts</div>
+                    <p class="subsection preview">This is where a preview for a post might go.</p>
+                </div>
+                .subsection.header {
+                    color: red;
+                }
+
+    example ->  <div>
+                    <div class="subsection header">Latest Posts</div>
+                    <p class="subsection" id="preview">
+                    This is where a preview for a post might go.
+                    </p>
+                </div>
+
+                .subsection.header {
+                    color: red;
+                }
+
+                .subsection#preview {
+                    color: blue;
+                }
+
+There are four types of combinators in total, but for right now we’re going to only show you the descendant combinator, which is represented in CSS by a single space between selectors. A descendant combinator will only cause elements that match the last selector to be selected if they also have an ancestor (parent, grandparent, etc.) that matches the previous selector.
+
+    example:
+        <div class="ancestor">
+        <!-- A -->
+        <div class="contents">
+            <!-- B -->
+            <div class="contents"><!-- C --></div>
+        </div>
+        </div>
+
+        <div class="contents"><!-- D --></div>
+
+        /* styles.css */
+
+        .ancestor .contents {
+        /* some declarations */
+        }
+
+            
